@@ -4,6 +4,9 @@ import javax.swing.*;
 public class Exemplo0303 {
     public static void main (String args[])
     {
+        Thread tempo;// cria objeto (tempo) para controle de tempo
+        tempo = new Thread();
+        tempo.start();
         String auxl = JOptionPane.showInputDialog(null, "foneça o valor do primero número");
         if (auxl == null)
             System.exit(0);
@@ -20,12 +23,14 @@ public class Exemplo0303 {
         }
         catch (ArithmeticException erro){
             JOptionPane.showMessageDialog(null,"Erro na divisão por zero!", "Erro",JOptionPane.ERROR_MESSAGE);
-
+System.out.println(erro.getMessage());
+erro.printStackTrace();
         }
         catch (NumberFormatException erro)
         {
             JOptionPane.showMessageDialog(null,"Digite apenas números inteiros","Erro", JOptionPane.ERROR_MESSAGE);
-
+            System.out.println(erro.getMessage());
+            erro.printStackTrace();
         }
     finally
         {
