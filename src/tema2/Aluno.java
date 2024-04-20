@@ -7,17 +7,30 @@ import java.util.List;
 public class Aluno {
     String nome;
     int id;
+
     Aluno(String nome, int id){
-        this.nome=nome;
-        this.id=id;
+        this.nome = nome;
+        this.id = id;
+    }
+
+    public String recuperarNome() {
+        return nome;
+    }
+
+    public int recuperarIdade() {
+        return id;
+    }
+
+    public void definirNome(String flávia) {
     }
 }
 
 class Departamento{
     String nome;
     List<Aluno> alunos = new ArrayList<>();
+
     Departamento(String nome){
-        this.nome=nome;
+        this.nome = nome;
     }
 
     // Método para adicionar aluno à lista de alunos do departamento
@@ -61,6 +74,7 @@ class Departamento{
         }
     }
 }
+
 
 
 
